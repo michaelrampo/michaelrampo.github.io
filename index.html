@@ -63,7 +63,26 @@
       <div class="container" data-aos="fade-down" data-aos-delay="1000" data-aos-delay="200">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>Michael A.Rampo dan Keluarga Mengucapkan Selamat Hari Natal 25 Desember 2024 Bagi Kita Semua Yang Merayakannya, Tuhan Yesus Memberkati.</h2>
+           <div>
+  <h1 class="text" data-flicker="i" contenteditable>
+    Flicker
+  </h1>
+  <span class="text" aria-hidden="true"> <h2>Michael A.Rampo dan Keluarga Mengucapkan Selamat Hari Natal 25 Desember 2024 Bagi Kita Semua Yang Merayakannya, Tuhan Yesus Memberkati.</h2></span>
+const letter = document.getElementById("flickerLetter");
+const offset = document.getElementById("flickerPosition");
+const span = document.querySelector("span");
+
+
+letter.addEventListener("input", function() {
+// For data-attributes
+  // span.setAttribute("data-flicker", this.value);
+  span.innerHTML = this.value;
+});
+
+offset.addEventListener("input", function() {
+  span.style.setProperty("--offset", this.value);
+});             
+</div>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
