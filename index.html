@@ -1,177 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MARKOM | IT Solution | Edukasi | Teknologi</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <!-- icon bootsrrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <!-- end bootsrap icon -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 
-    <!--AOS  -->
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- my css -->
-    <link rel="stylesheet" href="style.css" />
-    <title>MARKOM | IT Solution | Edukasi | Tekhnologi</title>
+
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Navbar */
+      .navbar {
+        backdrop-filter: blur(10px);
+        background-color: rgba(13, 110, 253, 0.8);
+        transition: all 0.4s ease;
+      }
+
+      .navbar.scrolled {
+        background-color: #0d6efd;
+      }
+
+      /* Hero Section */
+      .jumbotron {
+        padding-top: 8rem;
+        background: linear-gradient(135deg, #0d6efd, #00b4d8);
+        color: white;
+        text-align: center;
+      }
+
+      .jumbotron img {
+        border: 4px solid white;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .jumbotron h1 {
+        font-weight: 700;
+      }
+
+      .jumbotron p {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+
+      section {
+        padding-top: 6rem;
+        padding-bottom: 5rem;
+      }
+
+      /* About */
+      #about {
+        background-color: #f8f9fa;
+      }
+
+      /* Services */
+      #projects {
+        background-color: #e9f2ff;
+      }
+
+      .card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Contact */
+      #contact i {
+        font-size: 1.5rem;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #0d6efd;
+        color: white;
+        padding: 2rem 0;
+        font-weight: 500;
+      }
+
+      footer p {
+        margin: 0;
+      }
+    </style>
   </head>
   <body id="home">
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">MARKOM</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">MARKOM</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div id="navbarNav" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">Tentang</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#projects">Layanan</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Hubungi Kami</a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Layanan</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Hubungi Kami</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- end navbar -->
-    <!-- jumbotron -->
-    <section class="jumbotron text-center">
-      <img src="img/markom - Copy.png" alt="markom" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4" data-aos="fade-down" data-aos-delay="500" data-aos-delay="500">MARKOM</h1>
-      <p class="lead" data-aos="fade-down" data-aos-delay="1000" data-aos-delay="1000">IT Solution | Edukasi | Tekhnologi</p>
+
+    <!-- Hero / Jumbotron -->
+    <section class="jumbotron">
+      <img src="img/markom.png" alt="markom" width="200" class="rounded-circle img-thumbnail mb-3" />
+      <h1 data-aos="fade-down">MARKOM</h1>
+      <p data-aos="fade-up" data-aos-delay="200">IT Solution | Edukasi | Teknologi</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffff"
-          fill-opacity="1"
-          d="M0,160L48,176C96,192,192,224,288,197.3C384,171,480,85,576,69.3C672,53,768,107,864,154.7C960,203,1056,245,1152,240C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
+        <path fill="#fff" d="M0,224L1440,96L1440,320L0,320Z"></path>
       </svg>
     </section>
-    <!-- end jumbotron -->
-    <!-- tentang -->
+
+    <!-- Tentang -->
     <section id="about">
-      <div class="container" data-aos="fade-down" data-aos-delay="1000" data-aos-delay="200">
-        <div class="row text-center mb-3">
-          <div class="col">
-           <div>
-   
-</div>
-          </div>
-        </div>
-        <div class="row justify-content-center fs-5 text-center">
-          <div class="col-mb-4">Ini adalah layanan/Jasa Informasi, Konsultasi dan Edukasi yang berhubungan dengan Informasi Tekhnologi Jaringan Internet, CCTV dan Website , Kami juga menerima jasa service dan Instal Ulang komputer/Laptop.</div>
-        </div>
+      <div class="container text-center" data-aos="fade-up">
+        <h2 class="mb-4 fw-bold">Tentang MARKOM</h2>
+        <p class="lead">
+          Kami menyediakan layanan informasi, konsultasi, dan edukasi di bidang Teknologi Informasi, termasuk jaringan internet, CCTV, dan pengembangan website. Kami juga menerima jasa servis dan instal ulang komputer/laptop.
+        </p>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#e2edff"
-          fill-opacity="1"
-          d="M0,96L48,106.7C96,117,192,139,288,133.3C384,128,480,96,576,117.3C672,139,768,213,864,224C960,235,1056,181,1152,138.7C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- end tentang -->
-    <!-- layanan -->
+
+    <!-- Layanan -->
     <section id="projects">
       <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Layanan</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="500">
-              <img src="img/layanan/work-1.jpg" class="card-img-top" alt="markom" />
+        <h2 class="text-center mb-5 fw-bold" data-aos="fade-down">Layanan Kami</h2>
+        <div class="row g-4">
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card">
+              <img src="img/layanan/work-1.jpg" class="card-img-top" alt="layanan" />
               <div class="card-body">
-                <p class="card-text">Layanan Privat Setting Mikrotik dasar, Management Bandwith sampai login page..</p>
+                <p class="card-text">Privat Setting Mikrotik, Manajemen Bandwidth, dan Login Page.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="500" data-aos-delay="300">
-              <img src="img/layanan/work-2.jpg" class="card-img-top" alt="markom" />
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card">
+              <img src="img/layanan/work-2.jpg" class="card-img-top" alt="layanan" />
               <div class="card-body">
-                <p class="card-text">Layanan Instalasi Jaringan Perkantoran, Hotel, Sekolah dan Tempat Usaha Anda.</p>
+                <p class="card-text">Instalasi jaringan untuk kantor, sekolah, hotel, dan usaha Anda.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="500" data-aos-delay="600">
-              <img src="img/layanan/work-3.jpg" class="card-img-top" alt="markom" />
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card">
+              <img src="img/layanan/work-3.jpg" class="card-img-top" alt="layanan" />
               <div class="card-body">
-                <p class="card-text">Layanan Desain Web berupa Profil Perusahaan, Portfolio, Portal Berita dll.</p>
+                <p class="card-text">Desain website: profil perusahaan, portfolio, portal berita, dan lainnya.</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card" data-aos="flip-left" data-aos-delay="500" data-aos-delay="800">
-              <img src="img/layanan/work-4.jpg" class="card-img-top" alt="markom" />
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card">
+              <img src="img/layanan/work-4.jpg" class="card-img-top" alt="layanan" />
               <div class="card-body">
-                <p class="card-text">Layanan Pemasangan dan Instalasi CCTV Perkantoran, Rumah, Hotel, dan Tempat Usaha Anda.</p>
+                <p class="card-text">Pemasangan dan instalasi CCTV untuk rumah dan tempat usaha Anda.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffff"
-          fill-opacity="1"
-          d="M0,160L48,176C96,192,192,224,288,197.3C384,171,480,85,576,69.3C672,53,768,107,864,154.7C960,203,1056,245,1152,240C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
     </section>
-    <!-- end layanan -->
-    <!-- kontak -->
-    <section id="contact">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h2>Hubungi Kami</h2>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col">
-            <p><i class="bi bi-whatsapp text-success"></i> 082238296847</p>
-         
-    
-            <p><i class="bi bi-telegram text-primary"></i> @M_A_Rampo</p>
-         
-            <p><i class="bi bi-github text-danger"></i>MichaelRampo</p>
-            
-      </div>
-        </div>
-      </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0d6efd"
-          fill-opacity="1"
-          d="M0,256L60,234.7C120,213,240,171,360,154.7C480,139,600,149,720,176C840,203,960,245,1080,245.3C1200,245,1320,203,1380,181.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-        ></path>
-      </svg>
-    </section>
-    <!-- end kontak -->
-    <!-- footer -->
-    <footer class="bg-primary text-white fw-bold text-center pb-5">
-      <p><i> IT Solution | Edukasi | Tekhnologi</i></p>
-    </footer>
-    <!-- end footer -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
-</html>
+    <!-- Kontak -->
+    <section id="contact">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Hubungi Kami</h2>
+        <p><i class="bi bi-whatsapp text-success"></i> 0822-3829-6847</p>
+        <p><i class="bi bi-telegram text-primary"></i> @M_A_Rampo</p>
+        <p><i class="bi bi-github text-dark"></i> MichaelRampo</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <p>© 2025 MARKOM — IT Solution | Edukasi | Teknologi</p>
+    </footer>
